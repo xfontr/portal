@@ -1,12 +1,12 @@
-import { Layout } from "../Layout/Layout";
+import { Suspense } from "react";
+import routes from "../../routes/routes";
+import LoadRoutes from "../LoadRoutes/LoadRoutes";
 
 const App = () => (
   <div className="app">
-    <Layout
-      heading={{ title: "ENJOY CHRISTMAS HOLIDAYS", subtitle: "Lorem ipsum" }}
-    >
-      Children
-    </Layout>
+    <Suspense>
+      <LoadRoutes {...{ routes }} />
+    </Suspense>
   </div>
 );
 
