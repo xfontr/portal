@@ -10,7 +10,7 @@ const routes: RouteData[] = [
   {
     path: paths.joinList,
     name: 'Christmas',
-    Page: lazy(() => import('../components/App/App')),
+    Page: lazy(() => import('../pages/ChristmasPage')),
     heading: {
       title: 'Enjoy christmas holidays',
       subtitle: 'Lorem ipsum, lorem ipsum and lorem ipsum.',
@@ -18,7 +18,7 @@ const routes: RouteData[] = [
   },
   {
     path: paths.notFound,
-    Page: lazy(() => import('../components/App/App')),
+    Page: lazy(() => import('../pages/ChristmasPage')),
     heading: {
       title: 'Page not found (404)',
       subtitle: "We couldn't find what you are looking for :(",
