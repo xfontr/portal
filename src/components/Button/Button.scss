@@ -1,0 +1,16 @@
+@use "../../theme/variables/colors";
+@use "../../theme/variables/spacings";
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  border-radius: spacings.$rad-small;
+  border: 1px solid transparent;
+  width: fit-content;
+
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  background-color: colors.$primary--light;
+  color: colors.$secondary;
+}
