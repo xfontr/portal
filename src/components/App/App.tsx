@@ -1,11 +1,11 @@
-import "./App.scss";
+import { Layout } from "../Layout/Layout";
 
 const App = () => (
-  <div className="app">
-    <div className="snowball">
+  <Layout>
+    <div className="app">
       <h1>ENJOY CHRISTMAS HOLIDAYS</h1>
     </div>
-  </div>
+  </Layout>
 );
 
 export default App;
