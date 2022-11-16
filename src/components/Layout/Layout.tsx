@@ -1,13 +1,17 @@
 import { PropsWithChildren, ReactNode } from "react";
+import PageInformation from "../../types/PageInformation";
+import PageHeading from "../PageHeading/PageHeading";
 import "./Layout.scss";
 
 type LayoutProps = {
   children: ReactNode;
+  heading?: PageInformation;
   sidebar?: ReactNode[];
 };
 
-export const Layout = ({ children, sidebar }: LayoutProps) => (
+export const Layout = ({ children, heading, sidebar }: LayoutProps) => (
   <BasicLayout>
+    {heading && <PageHeading {...{ heading }}></PageHeading>}
     <main>{children}</main>
     {sidebar && (
       <aside>
