@@ -13,7 +13,10 @@ describe("Given a PageHeading component", () => {
       render(<PageHeading heading={pageInformation} />);
 
       const pageHeading = [
-        screen.getByRole("heading", { name: pageInformation.title, level: 1 }),
+        screen.getByRole("heading", {
+          name: pageInformation.title.toUpperCase(),
+          level: 1,
+        }),
         screen.getByText(pageInformation.subtitle),
       ];
 

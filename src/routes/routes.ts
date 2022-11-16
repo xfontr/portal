@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import RouteData from '../types/RouteData';
 import paths from './paths';
 
@@ -9,16 +10,16 @@ const routes: RouteData[] = [
   {
     path: paths.joinList,
     name: 'Christmas',
-    // Page: lazy(() => import('../pages/ChristmasPage/ChristmasPage')),
-    pageInformation: {
+    Page: lazy(() => import('../components/App/App')),
+    heading: {
       title: 'Enjoy christmas holidays',
       subtitle: 'Lorem ipsum, lorem ipsum and lorem ipsum.',
     },
   },
   {
     path: paths.notFound,
-    // Page: lazy(() => import('../pages/NotFoundPage/NotFoundPage')),
-    pageInformation: {
+    Page: lazy(() => import('../components/App/App')),
+    heading: {
       title: 'Page not found (404)',
       subtitle: "We couldn't find what you are looking for :(",
     },
