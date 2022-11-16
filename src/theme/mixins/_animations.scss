@@ -1,0 +1,35 @@
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    }
+  }
+  
+  @mixin animate($name, $time:1s, $algor:linear, $delay:"", $loop:infinite,$fill:"") {
+    -webkit-animation: #{$name} $time $algor #{$delay} $loop #{$fill};
+      -moz-animation: #{$name} $time $algor #{$delay} $loop #{$fill};
+      -ms-animation: #{$name} $time $algor #{$delay} $loop #{$fill};
+      animation: #{$name} $time $algor #{$delay} $loop #{$fill};
+  }
+
+  @mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+  }
+
+  @include keyframes(flash) {
+    10% {
+      @include transform(scale(0.5,0.5));
+    }
+  }
+  
