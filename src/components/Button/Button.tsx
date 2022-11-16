@@ -1,5 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 import setClass from "../../services/setClass/setClass";
+import "./Button.scss"
 
 interface ButtonProps
   extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
