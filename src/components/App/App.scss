@@ -6,8 +6,10 @@
   margin: 0 auto;
   max-width: breakpoints.$small;
   padding: 6rem spacings.$medium;
-  position: relative;
   min-height: 100vh;
+
+  display: flex;
+  align-items: center;
 
   @media (min-width: breakpoints.$small) {
     max-width: breakpoints.$big;

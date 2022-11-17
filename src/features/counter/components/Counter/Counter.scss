@@ -1,3 +1,6 @@
+@use "../../../../theme/variables/spacings";
+
 .counter {
   display: flex;
+  padding-top: spacings.$big;
 }

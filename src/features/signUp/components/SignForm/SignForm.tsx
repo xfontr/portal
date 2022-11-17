@@ -1,6 +1,8 @@
 import { SyntheticEvent, useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../../../components/Button/Button";
 import useForm from "../../../../hooks/useForm";
+import paths from "../../../../routes/paths";
 import { UiContext } from "../../../../store/UiContext";
 import useUsers from "../../hooks/useUsers";
 import { Users } from "../../types/Users";
@@ -17,6 +19,7 @@ const SignForm = (): JSX.Element => {
   const [users, setUsers] = useState<Users>();
   const [errors, setErrors] = useState<string[]>([]);
   const { setUiStatus } = useContext(UiContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     (async () => {
@@ -25,7 +28,7 @@ const SignForm = (): JSX.Element => {
   }, [getUsers]);
 
   const isFormValid = (input: string): boolean => {
-    const regex = new RegExp("[a-z0-9]+@mail.schwarz/");
+    const regex = new RegExp("[a-z0-9]+@mail.schwarz");
 
     return regex.test(input);
   };
@@ -57,6 +60,9 @@ const SignForm = (): JSX.Element => {
     await signUser({
       email: values.email,
     });
+
+    sessionStorage.setItem("success", "true");
+    navigate(paths.signSuccess);
   };
 
   return (

@@ -10,7 +10,7 @@ const routes: RouteData[] = [
   },
   {
     path: paths.joinList,
-    Page: lazy(() => import('../pages/ChristmasPage')),
+    Page: lazy(() => import('../features/counter/pages/ChristmasPage')),
     sidebar: [SignForm],
     heading: {
       title: 'ENJOY CHRISTMAS HOLIDAYS',
@@ -25,8 +25,20 @@ const routes: RouteData[] = [
     },
   },
   {
+    path: paths.signSuccess,
+    Page: lazy(() => import('../features/signUp/pages/SuccessPage')),
+    heading: {
+      title: 'THANK YOU FOR JOINING SGS SECRET SANTA',
+      subtitle:
+        'Qui cillum et excepteur proident do dolor labore duis nisi consequat. Ullamco incididunt quis ullamco esse voluptate incididunt.',
+      highlights: {
+        words: ['SGS'],
+      },
+    },
+  },
+  {
     path: paths.notFound,
-    Page: lazy(() => import('../pages/ChristmasPage')),
+    Page: lazy(() => import('../pages/NotFoundPage')),
     heading: {
       title: 'Page not found (404)',
       subtitle: "We couldn't find what you are looking for :(",
