@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+import SignForm from '../features/signUp/components/SignForm';
 import RouteData from '../types/RouteData';
 import paths from './paths';
 
@@ -10,6 +11,7 @@ const routes: RouteData[] = [
   {
     path: paths.joinList,
     Page: lazy(() => import('../pages/ChristmasPage')),
+    sidebar: [SignForm],
     heading: {
       title: 'Enjoy christmas holidays',
       subtitle: 'Lorem ipsum, lorem ipsum and lorem ipsum.',

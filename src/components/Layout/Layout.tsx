@@ -6,7 +6,7 @@ import "./Layout.scss";
 type LayoutProps = {
   children: ReactNode;
   heading?: PageInformation;
-  sidebar?: ReactNode[];
+  sidebar?: (() => JSX.Element)[];
 };
 
 export const Layout = ({ children, heading, sidebar }: LayoutProps) => (
@@ -15,8 +15,10 @@ export const Layout = ({ children, heading, sidebar }: LayoutProps) => (
     <main className="main__content">{children}</main>
     {sidebar && (
       <aside className="main__sidebar">
-        {sidebar.map((child, index) => (
-          <div key={index}>{child}</div>
+        {sidebar.map((Child, index) => (
+          <div key={index}>
+            <Child />
+          </div>
         ))}
       </aside>
     )}
