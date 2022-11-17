@@ -8,12 +8,7 @@ const App = () => (
   <div className="app snowball">
     <Suspense>
       <LoadRoutes {...{ routes }} />
-      <Counter
-        dataToCount={[
-          { count: 12, title: "days" },
-          { count: 12, title: "months" },
-        ]}
-      />
+      <Counter dataToCount={[{ count: 12, title: "days" }, { count: 12 }]} />
     </Suspense>
   </div>
 );
