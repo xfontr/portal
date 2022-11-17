@@ -1,3 +1,5 @@
-type CountData = { count: number; title?: string }[];
+export type Moments = 'days' | 'hours' | 'minutes' | 'seconds';
+
+type CountData = Record<Moments, number>;
 
 export default CountData;

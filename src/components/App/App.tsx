@@ -1,14 +1,16 @@
 import { Suspense } from "react";
-import Counter from "../../features/counter/components/Counter/Counter";
+import DateCounter from "../../features/counter/components/DateCounter/DateCounter";
 import routes from "../../routes/routes";
 import LoadRoutes from "../LoadRoutes/LoadRoutes";
 import "./App.scss";
+
+const christmasDate = "2022-12-24";
 
 const App = () => (
   <div className="app snowball">
     <Suspense>
       <LoadRoutes {...{ routes }} />
-      <Counter dataToCount={[{ count: 12, title: "days" }, { count: 12 }]} />
+      <DateCounter limitDate={christmasDate} />
     </Suspense>
   </div>
 );

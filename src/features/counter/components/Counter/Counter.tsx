@@ -8,7 +8,7 @@ type CounterProps = {
 
 const Counter = ({ dataToCount }: CounterProps) => (
   <div className="counter">
-    {dataToCount.map(({ count, title }, index) => (
+    {Object.entries(dataToCount).map(([title, count], index) => (
       <SingleCounter {...{ count, title }} key={index} />
     ))}
   </div>
