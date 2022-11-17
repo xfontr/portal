@@ -25,13 +25,15 @@ const SignForm = (): JSX.Element => {
   }, [getUsers]);
 
   const isFormValid = (input: string): boolean => {
-    const regex = new RegExp("[a-z0-9]+@mail.schwarz");
+    const regex = new RegExp("[a-z0-9]+@mail.schwarz/");
 
     return regex.test(input);
   };
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
+
+    setErrors([]);
 
     const emailList = users?.map(({ email }) => email);
 
@@ -46,8 +48,7 @@ const SignForm = (): JSX.Element => {
     }
 
     if (!isFormValid(values.email)) {
-      setErrors((currentErrors) => [
-        ...currentErrors,
+      setErrors([
         "The email entered is not valid. Please make sure the domain is '@mail.schwarz'",
       ]);
       return;
