@@ -1,0 +1,27 @@
+@use "../../../../theme/variables/colors";
+
+.single-counter {
+  width: 224px;
+  color: colors.$secondary;
+
+  &__title {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: -1rem;
+  }
+
+  &__count {
+    height: 224px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    font-weight: bold;
+
+    background: url(https://joeweaver.me/codepenassets/freecodecamp/challenges/build-a-pomodoro-clock/bg.png)
+      no-repeat center center;
+    background-size: auto;
+    background-size: contain;
+  }
+}
