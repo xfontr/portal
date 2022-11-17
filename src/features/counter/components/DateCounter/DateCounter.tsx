@@ -12,11 +12,14 @@ type DateCounterProps = {
 };
 
 const DateCounter = ({ limitDate }: DateCounterProps): JSX.Element => {
+  const eventTime = moment(limitDate);
+  let duration = moment.duration(eventTime.diff(currentTime));
+
   const [viewDate, setViewDate] = useState<CountData>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+    days: Math.floor(duration.asDays()),
+    hours: duration.hours(),
+    minutes: duration.minutes(),
+    seconds: duration.seconds(),
   });
 
   useEffect(() => {

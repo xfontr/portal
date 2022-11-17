@@ -6,6 +6,14 @@
 
   &__title {
     margin-bottom: spacings.$medium;
+    width: 60%;
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: 1.2rem;
+    max-width: 70%;
+    line-height: 1.5rem;
   }
 
   &__title,
