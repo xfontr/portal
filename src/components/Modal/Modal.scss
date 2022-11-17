@@ -1,0 +1,51 @@
+@use "../../theme/variables/spacings";
+@use "../../theme/variables/colors";
+
+.modal {
+  position: fixed;
+  width: 20rem;
+  left: calc(50vw - 10rem);
+  top: spacings.$big;
+  background-color: colors.$secondary;
+  box-shadow: 10px 10px 30px 10px rgba(0, 0, 0, 0.15);
+  padding: spacings.$medium;
+  border-radius: spacings.$rad-small;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: spacings.$medium;
+  transition: 0.2s ease-in;
+
+  &--in {
+    animation-name: crazy-in;
+    animation-duration: 0.3s;
+    transform: translate(0);
+  }
+
+  &--error {
+    color: colors.$error;
+  }
+
+  &--success {
+    color: colors.$success;
+  }
+
+  &__icon {
+    line-height: 0;
+    font-size: 2rem;
+  }
+
+  &__message {
+    color: colors.$primary;
+  }
+}
+
+@keyframes crazy-in {
+  from {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  to {
+    transform: rotate3d(360, 1, 1, 360deg);
+  }
+}
