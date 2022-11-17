@@ -9,11 +9,13 @@ const routes: RouteData[] = [
   },
   {
     path: paths.joinList,
-    name: 'Christmas',
     Page: lazy(() => import('../pages/ChristmasPage')),
     heading: {
       title: 'Enjoy christmas holidays',
       subtitle: 'Lorem ipsum, lorem ipsum and lorem ipsum.',
+      highlights: {
+        words: ['christmas'],
+      },
     },
   },
   {
@@ -22,6 +24,9 @@ const routes: RouteData[] = [
     heading: {
       title: 'Page not found (404)',
       subtitle: "We couldn't find what you are looking for :(",
+      highlights: {
+        words: ['(404)'],
+      },
     },
   },
 ];

@@ -17,7 +17,7 @@ describe("Given a LoadRoutes component", () => {
       );
 
       const christmasPage = await screen.findByRole("heading", {
-        name: routes[1].heading!.title.toUpperCase().toUpperCase(),
+        name: routes[1].heading!.title,
         level: 1,
       });
 
@@ -34,7 +34,7 @@ describe("Given a LoadRoutes component", () => {
       );
 
       const christmasPage = await screen.findByRole("heading", {
-        name: routes[1].heading!.title.toUpperCase(),
+        name: routes[1].heading!.title,
         level: 1,
       });
 
@@ -53,7 +53,7 @@ describe("Given a LoadRoutes component", () => {
       );
 
       const notFoundPage = await screen.findByRole("heading", {
-        name: routes[2].heading!.title.toUpperCase(),
+        name: routes[2].heading!.title,
         level: 1,
       });
 
