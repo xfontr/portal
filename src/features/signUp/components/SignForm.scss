@@ -1,0 +1,26 @@
+@use "../../../theme/variables/spacings";
+@use "../../../theme/variables/colors";
+
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  gap: spacings.$small;
+  color: colors.$secondary;
+
+  & * {
+    width: 100%;
+  }
+
+  & label {
+    font-weight: bold;
+  }
+
+  &__email {
+    padding: 0.8rem 0.8rem;
+    background-color: colors.$secondary;
+    border: 1px solid rgba(11, 15, 19, 0.229);
+    border-radius: spacings.$rad-small;
+    width: 100%;
+    transition: 0.2s;
+  }
+}

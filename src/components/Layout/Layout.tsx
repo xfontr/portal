@@ -6,19 +6,23 @@ import "./Layout.scss";
 type LayoutProps = {
   children: ReactNode;
   heading?: PageInformation;
-  sidebar?: ReactNode[];
+  sidebar?: (() => JSX.Element)[];
 };
 
 export const Layout = ({ children, heading, sidebar }: LayoutProps) => (
   <>
     {heading && <PageHeading {...{ heading }}></PageHeading>}
-    <main className="main__content">{children}</main>
-    {sidebar && (
-      <aside className="main__sidebar">
-        {sidebar.map((child, index) => (
-          <div key={index}>{child}</div>
-        ))}
-      </aside>
-    )}
+    <main className="main__content">
+      {children}
+      {sidebar && (
+        <aside className="main__sidebar">
+          {sidebar.map((Child, index) => (
+            <div key={index}>
+              <Child />
+            </div>
+          ))}
+        </aside>
+      )}
+    </main>
   </>
 );

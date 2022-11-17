@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import PageInformation from './PageInformation';
 
 interface RouteData {
@@ -6,7 +5,7 @@ interface RouteData {
   navigate?: string;
   Page?: React.LazyExoticComponent<() => JSX.Element>;
   heading?: PageInformation;
-  sidebar?: ReactNode[];
+  sidebar?: (() => JSX.Element)[];
 }
 
 export default RouteData;

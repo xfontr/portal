@@ -1,6 +1,6 @@
 import moment from "moment";
 import { useEffect, useState } from "react";
-import isDateZero from "../../../services/isDateZero";
+import isDateZero from "../../services/isDateZero";
 import CountData from "../../types/CountData";
 import Counter from "../Counter/Counter";
 

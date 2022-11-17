@@ -1,9 +1,22 @@
+@use "../../theme/variables/breakpoints";
+
 .main {
   &__content {
     display: flex;
+    justify-content: space-between;
+
+    @media (max-width: breakpoints.$big) {
+      flex-direction: column;
+    }
   }
 
   &__sidebar {
-    width: 30%;
+    max-width: 20rem;
+    flex: 1;
+    align-self: center;
+
+    @media (max-width: breakpoints.$big) {
+      width: 100%;
+    }
   }
 }
