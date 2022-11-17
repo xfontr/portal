@@ -1,0 +1,11 @@
+@use "../../theme/variables/colors";
+
+.heading {
+  &__title,
+  &__subtitle {
+    color: colors.$secondary;
+  }
+  &--highlight {
+    color: colors.$contrast;
+  }
+}
