@@ -13,10 +13,14 @@ const routes: RouteData[] = [
     Page: lazy(() => import('../pages/ChristmasPage')),
     sidebar: [SignForm],
     heading: {
-      title: 'Enjoy christmas holidays',
-      subtitle: 'Lorem ipsum, lorem ipsum and lorem ipsum.',
+      title: 'ENJOY CHRISTMAS HOLIDAYS',
+      subtitle:
+        'Qui cillum et excepteur proident do dolor labore duis nisi consequat. Ullamco incididunt quis ullamco esse voluptate incididunt.',
       highlights: {
-        words: ['christmas'],
+        words: ['CHRISTMAS'],
+      },
+      props: {
+        className: 'heading--main',
       },
     },
   },

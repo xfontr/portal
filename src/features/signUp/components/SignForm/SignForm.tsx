@@ -60,6 +60,13 @@ const SignForm = (): JSX.Element => {
 
   return (
     <>
+      <img
+        src="img/xmas.png"
+        alt="Girl smiling dressed up with christmas clothing"
+        height={320}
+        width={320}
+      />
+
       <form
         onSubmit={handleSubmit}
         data-testid="sign-form"

@@ -6,6 +6,7 @@
   flex-direction: column;
   gap: spacings.$small;
   color: colors.$secondary;
+  margin-top: spacings.$small;
 
   & * {
     width: 100%;
