@@ -12,8 +12,8 @@ type LayoutProps = {
 export const Layout = ({ children, heading, sidebar }: LayoutProps) => (
   <>
     {heading && <PageHeading {...{ heading }}></PageHeading>}
-    <main className="main__content">
-      {children}
+    <main className="main">
+      <div className="main__content">{children}</div>
       {sidebar && (
         <aside className="main__sidebar">
           {sidebar.map((Child, index) => (
