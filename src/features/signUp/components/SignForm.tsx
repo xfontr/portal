@@ -1,6 +1,7 @@
-import { SyntheticEvent, useEffect, useState } from "react";
+import { SyntheticEvent, useContext, useEffect, useState } from "react";
 import Button from "../../../components/Button/Button";
 import useForm from "../../../hooks/useForm";
+import { UiContext } from "../../../store/UiContext";
 import useUsers from "../hooks/useUsers";
 import { Users } from "../types/Users";
 import "./SignForm.scss";
@@ -13,6 +14,7 @@ const SignForm = (): JSX.Element => {
   const { getUsers, signUser } = useUsers();
   const { values, handleChange } = useForm(formInitialState);
   const [users, setUsers] = useState<Users>();
+  const { setUiStatus } = useContext(UiContext);
 
   useEffect(() => {
     (async () => {
@@ -26,7 +28,13 @@ const SignForm = (): JSX.Element => {
     const emailList = users?.map(({ email }) => email);
 
     if (emailList?.includes(values.email)) {
-      throw new Error("User already signed up");
+      setUiStatus((currentState) => ({
+        ...currentState,
+        status: "ERROR",
+        message: "User already signed up",
+      }));
+
+      return;
     }
 
     await signUser({
