@@ -1,1 +1,9 @@
-@use "../../theme/components/snow";
+.main {
+  &__content {
+    display: flex;
+  }
+
+  &__sidebar {
+    width: 30%;
+  }
+}
