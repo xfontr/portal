@@ -1,4 +1,4 @@
-import CountData from '../counter/types/CountData';
+import CountData from '../types/CountData';
 
 const isDateZero = (date: CountData): boolean =>
   Object.values(date)
