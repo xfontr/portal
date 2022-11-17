@@ -1,11 +1,12 @@
-@use "../../../theme/variables/spacings";
-@use "../../../theme/variables/colors";
+@use "../../../../theme/variables/spacings";
+@use "../../../../theme/variables/colors";
 
 .sign-form {
   display: flex;
   flex-direction: column;
   gap: spacings.$small;
   color: colors.$secondary;
+  margin-top: spacings.$small;
 
   & * {
     width: 100%;

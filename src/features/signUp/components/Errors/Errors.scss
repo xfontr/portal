@@ -1,0 +1,22 @@
+@use "../../../../theme/variables/spacings";
+@use "../../../../theme/variables/colors";
+@use "../../../../theme/variables/breakpoints";
+
+.errors {
+  margin-top: spacings.$medium;
+
+  @media (min-width: breakpoints.$big) {
+    max-width: 36rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: spacings.$medium;
+  }
+
+  &__message {
+    color: colors.$error;
+    border-radius: spacings.$rad-small;
+  }
+}

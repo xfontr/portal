@@ -4,10 +4,12 @@ import LoadRoutes from "../LoadRoutes/LoadRoutes";
 import "./App.scss";
 
 const App = () => (
-  <div className="app snowball">
-    <Suspense>
-      <LoadRoutes {...{ routes }} />
-    </Suspense>
+  <div className="snowball">
+    <div className="app">
+      <Suspense>
+        <LoadRoutes {...{ routes }} />
+      </Suspense>
+    </div>
   </div>
 );
 

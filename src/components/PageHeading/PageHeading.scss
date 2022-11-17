@@ -1,11 +1,25 @@
 @use "../../theme/variables/colors";
+@use "../../theme/variables/spacings";
 
 .heading {
+  margin-bottom: spacings.$big;
+
+  &__title {
+    margin-bottom: spacings.$medium;
+  }
+
   &__title,
   &__subtitle {
     color: colors.$secondary;
   }
   &--highlight {
     color: colors.$contrast;
+  }
+
+  &--main {
+    h1 {
+      font-size: 5rem;
+      width: 40%;
+    }
   }
 }
