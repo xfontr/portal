@@ -1,0 +1,19 @@
+@use "../../theme/variables/breakpoints";
+@use "../../theme/variables/spacings";
+@use "../../theme/components/snow";
+
+.app {
+  margin: 0 auto;
+  max-width: breakpoints.$small;
+  padding: 6rem spacings.$medium;
+  position: relative;
+  min-height: 100vh;
+
+  @media (min-width: breakpoints.$small) {
+    max-width: breakpoints.$medium;
+  }
+
+  @media (min-width: breakpoints.$medium) {
+    max-width: breakpoints.$big;
+  }
+}
