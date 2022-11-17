@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import SignForm from "../../features/signUp/components/SignForm";
+import SignForm from "../../features/signUp/components/SignForm/SignForm";
 import { Layout } from "./Layout";
 
 describe("Given a Layout component", () => {

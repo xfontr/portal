@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import SignForm from '../features/signUp/components/SignForm';
+import SignForm from '../features/signUp/components/SignForm/SignForm';
 import RouteData from '../types/RouteData';
 import paths from './paths';
 
