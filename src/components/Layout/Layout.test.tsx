@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { ReactNode } from "react";
+import { BrowserRouter } from "react-router-dom";
 import SignForm from "../../features/signUp/components/SignForm/SignForm";
 import UiContextProvider from "../../store/UiContextProvider";
 import { Layout } from "./Layout";
@@ -15,9 +16,11 @@ describe("Given a Layout component", () => {
       const children = "Hello";
 
       render(
-        <UiContextProvider>
-          <Layout sidebar={[SignForm]}>{children}</Layout>
-        </UiContextProvider>
+        <BrowserRouter>
+          <UiContextProvider>
+            <Layout sidebar={[SignForm]}>{children}</Layout>
+          </UiContextProvider>
+        </BrowserRouter>
       );
 
       const layout = [
