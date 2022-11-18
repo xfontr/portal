@@ -60,7 +60,7 @@ describe("Given a LoadRoutes component", () => {
       );
 
       const notFoundPage = await screen.findByRole("heading", {
-        name: routes[2].heading!.title,
+        name: routes[3].heading!.title,
         level: 1,
       });
 

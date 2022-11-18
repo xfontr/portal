@@ -4,6 +4,8 @@ import App from "./components/App/App";
 import { BrowserRouter } from "react-router-dom";
 import "./theme/index.scss";
 import UiContextProvider from "./store/UiContextProvider";
+import { ErrorBoundary } from "react-error-boundary";
+import FallbackError from "./components/FallbackError/FallbackError";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -11,10 +13,12 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <UiContextProvider>
-        <App />
-      </UiContextProvider>
-    </BrowserRouter>
+    <ErrorBoundary FallbackComponent={FallbackError}>
+      <BrowserRouter>
+        <UiContextProvider>
+          <App />
+        </UiContextProvider>
+      </BrowserRouter>
+    </ErrorBoundary>
   </React.StrictMode>
 );
