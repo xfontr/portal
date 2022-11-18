@@ -1,6 +1,6 @@
 const session = {
-  isEndDate: () => sessionStorage.getItem('isEndDate'),
-  isAllowed: () => sessionStorage.getItem('success'),
+  isEndDate: 'isEndDate',
+  isAllowed: 'success',
 };
 
 export default session;

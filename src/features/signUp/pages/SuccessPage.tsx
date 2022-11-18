@@ -1,13 +1,14 @@
 import Button from "../../../components/Button/Button";
 import session from "../../../configs/session";
-import useSession from "../../../hooks/useSession";
+import useRouteProtection from "../../../hooks/useRouteProtection";
 import paths from "../../../routes/paths";
+import handleSession from "../../../services/handleSession";
 
 const SuccessPage = (): JSX.Element => {
-  useSession(session.isAllowed(), paths.joinList);
+  useRouteProtection(session.isAllowed, paths.joinList);
 
   return (
-    <Button to={paths.joinList} onClick={() => sessionStorage.clear()}>
+    <Button to={paths.joinList} onClick={() => handleSession().clearAll()}>
       Add more people to the list
     </Button>
   );

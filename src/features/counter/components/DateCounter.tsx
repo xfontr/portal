@@ -1,5 +1,5 @@
 import moment from "moment";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useCounter from "../hooks/useCounter";
 import isDateZero from "../services/isDateZero";
 import CountData from "../types/CountData";

@@ -1,9 +1,9 @@
 import session from "../../../configs/session";
-import useSession from "../../../hooks/useSession";
+import useSession from "../../../hooks/useRouteProtection";
 import paths from "../../../routes/paths";
 
 const EndDate = (): JSX.Element => {
-  useSession(session.isEndDate(), paths.joinList);
+  useSession(session.isEndDate, paths.joinList);
 
   return (
     <section>

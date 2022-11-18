@@ -1,8 +1,10 @@
 import { SyntheticEvent, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../../components/Button/Button";
+import session from "../../../../configs/session";
 import useForm from "../../../../hooks/useForm";
 import paths from "../../../../routes/paths";
+import handleSession from "../../../../services/handleSession";
 import { UiContext } from "../../../../store/UiContext";
 import useUsers from "../../hooks/useUsers";
 import { Users } from "../../types/Users";
@@ -61,7 +63,7 @@ const SignForm = (): JSX.Element => {
       email: values.email,
     });
 
-    sessionStorage.setItem("success", "true");
+    handleSession().setItem(session.isAllowed, "true");
     navigate(paths.signSuccess);
   };
 

@@ -1,12 +1,14 @@
 import { Navigate } from "react-router-dom";
+import session from "../../../configs/session";
 import paths from "../../../routes/paths";
+import handleSession from "../../../services/handleSession";
 
 type CounterFinishProps = {
   limitDate: `${string}-${string}-${string}`;
 };
 
 const CounterFinish = ({ limitDate }: CounterFinishProps): JSX.Element => {
-  sessionStorage.setItem("isEndDate", "true");
+  handleSession().setItem(session.isEndDate, "true");
 
   return (
     <>
