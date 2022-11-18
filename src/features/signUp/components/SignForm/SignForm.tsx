@@ -5,7 +5,6 @@ import session from "../../../../configs/session";
 import useForm from "../../../../hooks/useForm";
 import paths from "../../../../routes/paths";
 import handleSession from "../../../../services/handleSession";
-import useSession from "../../../../services/handleSession";
 import { UiContext } from "../../../../store/UiContext";
 import useUsers from "../../hooks/useUsers";
 import { Users } from "../../types/Users";
