@@ -47,6 +47,28 @@ const routes: RouteData[] = [
       },
     },
   },
+  {
+    path: paths.counterIsOver,
+    Page: lazy(() => import('../features/counter/pages/EndDate')),
+    heading: {
+      title: 'Christmas is over :(',
+      subtitle: 'But hey, feel free to wait until next year :)',
+      highlights: {
+        words: [':('],
+      },
+    },
+  },
+  {
+    path: paths.counterEndDate,
+    Page: lazy(() => import('../features/counter/pages/EndDate')),
+    heading: {
+      title: "It's christmas!",
+      subtitle: 'Enjoy the day :)',
+      highlights: {
+        words: ['christmas!'],
+      },
+    },
+  },
 ];
 
 export default routes;

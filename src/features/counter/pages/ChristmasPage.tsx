@@ -1,4 +1,4 @@
-import DateCounter from "../components/DateCounter/DateCounter";
+import DateCounter from "../components/DateCounter";
 
 const christmasDate = "2022-12-24";
 
