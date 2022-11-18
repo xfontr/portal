@@ -1,18 +1,10 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import Button from "../../../components/Button/Button";
+import session from "../../../configs/session";
+import useSession from "../../../hooks/useSession";
 import paths from "../../../routes/paths";
 
 const SuccessPage = (): JSX.Element => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const isAllowed = sessionStorage.getItem("success");
-
-    if (isAllowed !== "true") {
-      navigate(paths.joinList);
-    }
-  }, [navigate]);
+  useSession(session.isAllowed(), paths.joinList);
 
   return (
     <Button to={paths.joinList} onClick={() => sessionStorage.clear()}>

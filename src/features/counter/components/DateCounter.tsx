@@ -1,8 +1,9 @@
 import moment from "moment";
 import { useEffect, useState } from "react";
-import isDateZero from "../../services/isDateZero";
-import CountData from "../../types/CountData";
-import Counter from "../Counter/Counter";
+import isDateZero from "../services/isDateZero";
+import CountData from "../types/CountData";
+import Counter from "./Counter/Counter";
+import CounterFinish from "./CounterFinish";
 
 const second = 1000;
 const currentTime = moment();
@@ -59,7 +60,7 @@ const DateCounter = ({ limitDate }: DateCounterProps): JSX.Element => {
   return (
     <>
       {isDateZero(viewDate) ? (
-        <span>Counter is over</span>
+        <CounterFinish {...{ limitDate }} />
       ) : (
         <Counter dataToCount={viewDate} />
       )}
